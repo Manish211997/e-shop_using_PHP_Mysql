@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Admin</title>
+<link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">
+<style>
+label {
+    /* To make sure that all labels have the same size and are properly aligned */
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+}
+input[type=text]
+{
+    font: 1em sans-serif;
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+</style>
+</head>
+
+<body>
+<a href="index.html"><img style="float:left;cursor:pointer" src="img/logo.PNG" width="8%" height="6%" /></a>
+<h1 align="center" style="margin-right:18%"><b>ADMIN</b></h1>
+<fieldset style="margin-top:5%;margin-left:27%;margin-right:33%">
+<legend align="center">Detail</legend>
+<form action="php/product_action.php" method="post" enctype="multipart/form-data">
+<div>
+	<label>Book_ID:</label>
+		<input type="text" name="id" required/>
+</div>
+<br />
+<div>
+	<label>Book_Name:</label>
+		<input type="text" name="name" required/>
+</div>
+<br />
+<div>
+	<label>Book_rate:</label>
+		<input type="number" name="rate" required/>
+</div>
+<br />
+<div>
+	<label>Book_Author:</label>
+		<input type="text" name="author" required/>
+</div>
+<br />
+<div>
+	<label>Book_Category:</label>
+		<input type="text" name="category" required/>
+</div>
+<br />
+<div>
+	<label>Book_quantity:</label>
+		<input type="number" name="bookquantity" required/>
+</div>
+<br />
+<div>
+	<label>Book_cover:</label>
+		<input type="file" name="image" required/>
+</div>
+<br />
+<input align="absmiddle" type="submit" value="SUBMIT" />
+</form>
+ </fieldset>
+</body>
+</html>

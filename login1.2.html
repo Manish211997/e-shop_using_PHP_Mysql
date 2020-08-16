@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Sign in/Sign up-Online Book Store</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style>
+		* {
+    box-sizing: border-box;
+	float:inherit;
+}
+/* The login area css */
+input[type=text], [type=password] {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid red;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #f8694a;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+	margin-bottom:12px;
+    cursor: pointer;
+    float:none;
+	opacity:.8;
+}
+
+input[type=submit]:hover {
+    background-color: #f8694a;
+	opacity:1;
+}
+
+.contain {
+    padding: 2px;
+}
+
+.col-25 {
+    float:inherit;
+    width: 25%;
+    margin-top: 10px;
+	margin-left:-25%;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+	margin-left:30%;
+	border-color:#FF0000;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+div.outer-container
+{
+	border:1px solid grey;
+}
+fieldset
+{
+	width:50%;
+}
+@media screen and (max-width: 800px) {
+    fieldset {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+/* The login area css end */
+button:hover
+{
+box-shadow:0px 2px 3px grey;
+cursor:pointer;
+}
+</style>
+<body>
+	<!-- HEADER -->
+	<header>
+
+		<!-- header -->
+		
+		<a class="logo" href="#">
+			<abbr title="header"><img src="./img/logo.png" alt="" width="14%" height="auto"></abbr>
+		</a>
+			<a style="float:right;text-decoration:none;border:hidden;border-radius:8px;background-color:#f8694a;font-size:2vw;color:white" href="indexphp.php">Go To Home</a>			      
+     </header>
+		<!-- header end-->
+		<!-- Login area -->	
+		<div align="center">
+		<fieldset>
+		<legend align="center"><h1 style="font-size:3vw">Login</h1></legend>
+		<div>
+			<div class="contain">
+    <form action="php/login_action.php" method="post">
+      <div class="row">
+        <div class="col-25">
+       <i class="fa fa-user-circle icon"></i>   <label for="fname">Email:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="email" placeholder="Enter your Email.." required>
+        </div>
+      </div>
+	   <div class="row">
+        <div class="col-25">
+       <i class="fa fa-key icon"></i>    <label for="fname">Password:</label>
+        </div>
+        <div class="col-75">
+         <input type="password" id="fname" name="psw" placeholder="Password.." required>
+        </div>
+      </div>
+	  <font color="#FF0000">* password or Email incorrect</font>
+	  <br /><br />
+      <div class="row">
+        <input type="submit" value="Login">
+      </div>
+    </form>
+	</div>
+	</div>
+	</fieldset>
+	</div>
+		<!-- Login area end -->	
+		<div align="center">
+		<p>New to Book store?</p>
+		<button><a href="registration.html" style="text-decoration:none;color:#000000" >Create a new account</a></button>
+		</div>	
+</body>
+
+</html>
